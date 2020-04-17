@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: danielpipelinesdotnetcoredocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: danielpipelinesdotnetcoredocker 
+    spec:
+      containers:
+        - name: danielpipelinesdotnetcoredocker 
+          image: mycontainerregistrykube.azurecr.io/danielpipelinesdotnetcoredocker
+          ports:
+          - containerPort: 80
